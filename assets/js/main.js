@@ -28,15 +28,14 @@ btncSubscribe.addEventListener('click', async () => {
 })
 
 async function loadData() {
-const subscriptions = await getHellfireClubeSubscriptions() 
+  const subscriptions = await getHellfireClubeSubscriptions() 
 
-subscriptionsList.innerHTML = subscriptions.map(sub => '
-<li>
-     ${sub.name}
-   </li>
-').join('') 
-console.log(subscriptions)
+  subscriptionsList.innerHTML = subscriptions.map(sub => '
+    <li>
+        ${sub.name}
+    </li>
+').join('')
+
+
+
 }
-
-loadData()
-
